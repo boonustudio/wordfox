@@ -1,0 +1,21 @@
+{
+  "name": "wordfox-online",
+  "version": "1.0.0",
+  "description": "Wordfox: an Imposter word party game with online rooms (Express + Socket.IO + MongoDB).",
+  "main": "server.js",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --env-file=.env server.js",
+    "test": "node test/engine.test.js && node test/hub.test.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "mongodb": "^6.12.0",
+    "socket.io": "^4.8.1"
+  }
+}

@@ -1,0 +1,16 @@
+# Optional Render Blueprint. You can also create the Web Service by hand (see README).
+services:
+  - type: web
+    name: wordfox
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: MONGODB_URI
+        sync: false   # you paste the value in the Render dashboard, it is never stored in the repo
+      - key: MONGODB_DB
+        value: wordfox
